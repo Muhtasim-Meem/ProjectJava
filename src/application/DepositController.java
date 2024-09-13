@@ -4,25 +4,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class TransferController {
+public class DepositController {
     @FXML
-    private TextField fromAccountField;
-    @FXML
-    private TextField toAccountField;
+    private TextField accountNumberField;
     @FXML
     private TextField amountField;
     @FXML
     private Label statusLabel;
 
     @FXML
-    private void handleTransfer() {
-        // Handle transfer logic
-        String fromAcc = fromAccountField.getText();
-        String toAcc = toAccountField.getText();
+    private void handleDeposit() {
+        // Handle deposit logic
+        String accNum = accountNumberField.getText();
         double amount = Double.parseDouble(amountField.getText());
         try {
-            Main.bank.transfer(fromAcc, toAcc, amount);
-            statusLabel.setText("Transfer successful!");
+            Main.bank.deposit(accNum, amount);
+            statusLabel.setText("Deposit successful!");
         } catch (Exception e) {
             statusLabel.setText("Error: " + e.getMessage());
         }

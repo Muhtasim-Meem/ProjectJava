@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="application.StudentAccountController" spacing="20">
+    <Label text="Add Student Account" styleClass="header"/>
+    <TextField fx:id="nameField" promptText="Name"/>
+    <TextField fx:id="nidField" promptText="NID"/>
+    <TextField fx:id="balanceField" promptText="Initial Balance"/>
+    <TextField fx:id="institutionNameField" promptText="Institution Name"/>
+    <Button text="Add Account" onAction="#handleAddStudentAccount"/>
+    <Label fx:id="statusLabel" styleClass="status-label"/>
+</VBox>
